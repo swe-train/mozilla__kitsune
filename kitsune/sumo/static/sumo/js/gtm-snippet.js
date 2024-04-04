@@ -43,6 +43,10 @@ import dntEnabled from "./libs/dnt-helper";
       configParameters.default_slug = html.dataset.gaDefaultSlug;
     }
 
+    console.log("------------------------------");
+    console.log(`config for ${GTM_CONTAINER_ID}:`);
+    console.log(`parameters: ${JSON.stringify(configParameters, null, 2)}`);
+    console.log("------------------------------");
     w.gtag('config', GTM_CONTAINER_ID, configParameters);
   }
 })(window);
